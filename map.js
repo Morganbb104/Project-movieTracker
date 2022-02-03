@@ -13,7 +13,7 @@ $('#location-button').click(function(){
 //2 get city name
 const getCityName = async (position) => { // === async function getCityName(postion) {}
     const {latitude, longitude} = position.coords;
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${openWeatherApiKey}`, {
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${openWeatherApiKey}`, {
         method: 'GET'
     });
     const data = await response.json();
@@ -27,3 +27,4 @@ const getCityName = async (position) => { // === async function getCityName(post
 const mapI = document.querySelector('#map');
 mapI.setAttribute('style', 'width:95%; height:70vh');
 mapI.setAttribute('src', `https://www.google.com/maps/embed/v1/search?q=record+movietheater+in+seattle&key=${apiKey}&zoom=12`);
+
