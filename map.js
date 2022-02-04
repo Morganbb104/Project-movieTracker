@@ -10,7 +10,7 @@ $('#location-button').click(function(){
         });  
     }
 });
-//2 get city name
+//2 get city name/
 const getCityName = async (position) => { // === async function getCityName(postion) {}
     const {latitude, longitude} = position.coords;
     const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${openWeatherApiKey}`, {
